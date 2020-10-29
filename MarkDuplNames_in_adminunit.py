@@ -16,12 +16,12 @@ import arcpy
 
 # Set environment settings
 #arcpy.env.workspace = "c:/data"
-arcpy.env.workspace = r'dataserver1/BMGFGRID/analysis/SLE/settlements'
+arcpy.env.workspace = r'data/settlements'
 
 
-in_table = r'\\dataserver1\BMGFGRID\analysis\SLE\settlements\Join_geonames_sections.shp'
-out_xls = r'\\dataserver1\BMGFGRID\analysis\SLE\settlements\sec_geonames.xls'
-out_csv = r'\\dataserver1\BMGFGRID\analysis\SLE\settlements\sec_geonames.csv'
+in_table = r'\\data\Join_geonames_sections.shp'
+out_xls = r'\\data\sec_geonames.xls'
+out_csv = r'\\data\sec_geonames.csv'
 
 
 settl_name = 'Name1'   # will search in this field for duplicates
