@@ -3,14 +3,14 @@
 import pandas as pd
 
 #path to input file
-in_xls = r'\\dataserver1\BMGFGRID\analysis\your_input_folder\your_input_data.xls'
+in_xls = r'\\data\your_input_data.xls'
 #path to result
-out_csv = r'\\dataserver1\BMGFGRID\analysis\your_output_folder\your_output_file.csv'
+out_csv = r'\\data\your_output_file.csv'
 
 
 #SCRIPT====================================================
 #path to list of string to searach for
-find_string = r'\\dataserver1\BMGFGRID\scripts\cleaning\find_strings.csv'
+find_string = r'\\data\find_strings.csv'
 
 
 #read data as pandas dataframe
