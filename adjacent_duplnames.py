@@ -6,14 +6,14 @@ import pandas as pd
 import numpy as np
 
 #input shapefile that contains clusters of settlement point locations with duplicate names
-in_table = r'\\dataserver1\BMGFGRID\analysis\MOZ\SettlementModel\MOZ_settl_files_cleaned\toponyms_over500m.shp'
+in_table = r'\\data\toponyms_over500m.shp'
 
 #specify location where the shapefile will be saved as excel table
-out_xls = r'\\dataserver1\BMGFGRID\analysis\MOZ\SettlementModel\MOZ_settl_files_cleaned\moz_plnames_distant_inp.xls'
+out_xls = r'\\data\moz_plnames_distant_inp.xls'
 
 specify location where the results will be saved
-out_csv = r'\\dataserver1\BMGFGRID\analysis\MOZ\SettlementModel\MOZ_settl_files_cleaned\moz_distances_calculated.csv'
-out_csv1 = r'\\dataserver1\BMGFGRID\analysis\MOZ\SettlementModel\MOZ_settl_files_cleaned\moz_dist_cleaned.csv'  #cleaned table
+out_csv = r'\\data\moz_distances_calculated.csv'
+out_csv1 = r'\\data\moz_dist_cleaned.csv'  #cleaned table
 
 #specify search distance
 search_distance = 0.2
@@ -51,7 +51,7 @@ m = mydf.reset_index().merge(mydf.reset_index(), on='moz_names')
 m['distance'] = haversine(m.x_x, m.y_x, m.x_y, m.y_y)
 
 
-#save the merged table if you need it. you can skip this step.
+#save the merged table
 m.to_csv(out_csv, encoding='utf-8')  
 
 
